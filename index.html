@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: rgb(29, 9, 39);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: silver;
+        }
+        .icon {
+            border: 5px solid rgb(29, 9, 39);
+            border-radius: 15px;
+            position: relative;
+            margin: auto;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+        .icon img {
+            display: block;
+            width: 468px;
+            height: 312px;
+            object-fit: cover;
+            transition: all 0.7s ease;
+        }
+        .icon:hover img {
+            filter: brightness(60%);
+            scale: 1.25;
+            cursor: pointer;
+        }
+        .icon h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            pointer-events: none;
+        }  
+    </style>
+</head>
+<body>
+    <div id="icon-spa" class="icon">
+        <a href="https://www.reddit.com/r/SpanishLearning">
+            <img id="img-flag-spa" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" 
+                alt="an image of a spanish flag">
+            <h1>Espa&ntilde;ol</h1>
+        </a>
+    </div>
+    <div id="icon-jap" class="icon">
+        <a href="https://www.reddit.com/r/LearnJapanese">
+            <img id="img-flag-jap" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png" 
+                alt="an image of a japanese flag">
+            <h1>日本語</h1>
+        </a>
+    </div>
+    <div id="icon-rus" class="icon">
+        <a href="https://www.reddit.com/r/LearnRussian">
+            <img id="img-flag-rus" src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" 
+                alt="an image of a russian flag">
+            <h1>Pyccкий</h1>
+        </a>
+    </div>
+    <div id="icon-hike" class="icon">
+        <a href="https://www.alltrails.com">
+            <img id="img-vely-lick-creek" src="images/IMG_2119.JPG" 
+                alt="a picture of hunter's wife on their first official hike">
+            <h1>Hiking</h1>
+        </a>
+    </div>
+</body>
+</html>    
