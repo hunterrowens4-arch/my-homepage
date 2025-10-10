@@ -1,88 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VioletHero</title>
-    <style>
-        body {
-            background-color: rgb(29, 9, 39);
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            text-align: left;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            color: silver;
-        }
-        .icon {
-            border: 5px solid rgb(29, 9, 39);
-            border-radius: 15px;
-            position: relative;
-            margin: auto;
-            margin-top: 50px;
-            overflow: hidden;
-        }
-        .icon img {
-            display: block;
-            width: 468px;
-            height: 312px;
-            object-fit: cover;
-            transition: all 0.7s ease;
-        }
-        .icon:hover img {
-            filter: brightness(60%);
-            scale: 1.25;
-            cursor: pointer;
-        }
-        .icon h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            margin: 0;
-            pointer-events: none;
-        }  
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunter's Universe — Neon Lounge Animated Gradient</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: #e0e0ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Animated vibrant gradient */
+    background: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
+    background-size: 400% 400%;
+    animation: gradientShift 30s ease infinite;
+    overflow: hidden;
+    position: relative;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #cfa0ff;
+    text-shadow: 0 0 20px rgba(207,160,255,0.8), 0 0 40px rgba(125,249,255,0.4);
+    margin-bottom: 60px;
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Rotating background particles covering viewport diagonally */
+  body::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at 30% 30%, rgba(207,160,255,0.15), transparent 60%),
+                radial-gradient(circle at 70% 70%, rgba(125,249,255,0.15), transparent 60%),
+                radial-gradient(circle, rgba(29,9,39,1) 80%, rgba(29,9,39,0) 100%);
+    animation: rotateBackground 60s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes rotateBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(125,249,255,0.3);
+    animation: float 15s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh) translateX(0) scale(0.5); }
+    100% { transform: translateY(-20vh) translateX(20vw) scale(1); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 35px rgba(125,249,255,0.7), 0 0 30px rgba(207,160,255,0.5); }
+    50% { box-shadow: 0 0 50px rgba(125,249,255,0.9), 0 0 45px rgba(207,160,255,0.7); }
+  }
+
+  @keyframes buttonBaseGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .nav-button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 22px 50px;
+    min-width: 250px;
+    cursor: pointer;
+    color: #1a0d2b;
+    animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
+    z-index: 1;
+    background: linear-gradient(135deg, #cfa0ff, #7df9ff);
+    margin: 15px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .nav-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.0) 80%);
+    transform: skewX(-25deg) translateX(0);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .nav-button:hover::before {
+    animation: neonFlare 0.8s forwards;
+  }
+
+  @keyframes neonFlare {
+    0% { transform: skewX(-25deg) translateX(-150%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: skewX(-25deg) translateX(250%); opacity: 0; }
+  }
+
+  .nav-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 60px rgba(125,249,255,0.9), 0 0 50px rgba(207,160,255,0.8);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+
+  /* Languages container at bottom */
+  .languages-container {
+    display: flex;
+    flex-direction: column-reverse; /* main button at bottom */
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    position: relative;
+  }
+
+  .sub-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* space above main button */
+  }
+
+  /* Hide sub-buttons initially */
+  .language-sub {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  /* Show sub-buttons */
+  .language-sub.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Sub-button hover glow */
+  .language-sub:hover {
+    animation: subButtonGlow 0.8s infinite alternate;
+  }
+
+  @keyframes subButtonGlow {
+    0% { box-shadow: 0 0 35px rgba(125,249,255,0.7), 0 0 30px rgba(207,160,255,0.5); }
+    100% { box-shadow: 0 0 50px rgba(125,249,255,0.9), 0 0 45px rgba(207,160,255,0.7); }
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2.5rem; margin-bottom: 40px; }
+    .nav-button { font-size: 1.3rem; padding: 16px 40px; min-width: 180px; }
+  }
+
+</style>
 </head>
+
 <body>
-    <div id="icon-spa" class="icon">
-        <a href="https://www.reddit.com/r/SpanishLearning">
-            <img id="img-flag-spa" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" 
-                alt="an image of a spanish flag">
-            <h1>Espa&ntilde;ol</h1>
-        </a>
+  <h1>Hunter’s Universe</h1>
+
+  <!-- Main buttons -->
+  <a href="anime.html" target="_blank"><button class="nav-button">Anime</button></a>
+  <a href="gaming.html" target="_blank"><button class="nav-button">Gaming</button></a>
+  <a href="travel.html" target="_blank"><button class="nav-button">Travel & Memories</button></a>
+
+  <!-- Languages at bottom -->
+  <div class="languages-container" id="languages-container">
+    <div class="sub-buttons">
+      <a href="spanish.html"><button class="nav-button language-sub">Spanish</button></a>
+      <a href="japanese.html"><button class="nav-button language-sub">Japanese</button></a>
+      <a href="russian.html"><button class="nav-button language-sub">Russian</button></a>
     </div>
-    <div id="icon-jap" class="icon">
-        <a href="https://www.reddit.com/r/LearnJapanese">
-            <img id="img-flag-jap" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png" 
-                alt="an image of a japanese flag">
-            <h1>日本語</h1>
-        </a>
-    </div>
-    <div id="icon-rus" class="icon">
-        <a href="https://www.reddit.com/r/LearnRussian">
-            <img id="img-flag-rus" src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" 
-                alt="an image of a russian flag">
-            <h1>Pyccкий</h1>
-        </a>
-    </div>
-    <div id="icon-hike" class="icon">
-        <a href="https://www.alltrails.com">
-            <img id="img-vely-lick-creek" src="hiking-background.JPG" 
-                alt="a picture of my wife on their first official hike">
-            <h1>Hiking</h1>
-        </a>
-    </div>
-    <div id="icon-games" class="icon">
-        <a href="gaming.html">
-            <img id="img-subnautica" src="https://lh3.googleusercontent.com/O2olQYKLh61GSdQwELQAZ-uIOq0o0Yyg1Z5GTZJvkFGKarRlegZxwt2z_-0vLwF1eRcrtDVA_Wqm021JpmFWoRryE8KEPo-hiS76-WVK3WhgojUFnlByPPCnk1qixsW5rYxgEGgA" 
-                alt="an image of the aurora from the game subnautica shortly after the initial crash">
-            <h1>Gaming</h1>
-        </a>
-    </div>
+    <button class="nav-button main" id="languages-main">Languages</button>
+  </div>
+
+<script>
+  // Floating particles
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.width = particle.style.height = `${Math.random() * 10 + 5}px`;
+    particle.style.left = `${Math.random() * 100}vw`;
+    particle.style.animationDuration = `${10 + Math.random() * 20}s`;
+    particle.style.animationDelay = `${Math.random() * 10}s`;
+    document.body.appendChild(particle);
+  }
+
+  // Languages toggle
+  const mainButton = document.getElementById('languages-main');
+  const subButtons = document.querySelectorAll('.language-sub');
+
+  mainButton.addEventListener('click', () => {
+    subButtons.forEach((btn, i) => {
+      setTimeout(() => {
+        btn.classList.toggle('show'); // toggle visibility
+      }, i * 150); // stagger effect
+    });
+  });
+</script>
+
 </body>
-</html>    
+</html>
