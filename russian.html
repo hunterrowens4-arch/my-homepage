@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Russian — Hunter's Universe</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: #e0e0ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
+    background-size: 400% 400%;
+    animation: gradientShift 30s ease infinite;
+    overflow: hidden;
+    position: relative;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #cfa0ff;
+    text-shadow: 0 0 20px rgba(207,160,255,0.8), 0 0 40px rgba(125,249,255,0.4);
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .category-button, .sub-button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 18px 40px;
+    min-width: 220px;
+    cursor: pointer;
+    color: #1a0d2b;
+    animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
+    z-index: 1;
+    background: linear-gradient(135deg, #cfa0ff, #7df9ff);
+    margin: 12px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .category-button::before, .sub-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 80%);
+    transform: skewX(-25deg) translateX(0);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .category-button:hover::before, .sub-button:hover::before {
+    animation: neonFlare 0.8s forwards;
+  }
+
+  @keyframes neonFlare {
+    0% { transform: skewX(-25deg) translateX(-150%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: skewX(-25deg) translateX(250%); opacity: 0; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 35px rgba(125,249,255,0.7), 0 0 30px rgba(207,160,255,0.5); }
+    50% { box-shadow: 0 0 50px rgba(125,249,255,0.9), 0 0 45px rgba(207,160,255,0.7); }
+  }
+
+  @keyframes buttonBaseGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .sub-button {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .sub-button.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .back-button {
+    margin-top: 50px;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(125,249,255,0.3);
+    animation: float 15s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh) translateX(0) scale(0.5); }
+    100% { transform: translateY(-20vh) translateX(20vw) scale(1); }
+  }
+
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2rem; margin-bottom: 30px; }
+    .category-button, .sub-button { font-size: 1.2rem; padding: 14px 30px; min-width: 160px; }
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Русский — Russian</h1>
+
+<div class="category-container">
+
+  <!-- Listening Group -->
+  <button class="category-button" data-group="listening">Listening ▼</button>
+  <div class="sub-buttons-container" id="listening">
+    <a href="https://www.youtube.com/c/RussianWithMax" target="_blank"><button class="sub-button">YouTube: Russian with Max</button></a>
+    <a href="https://podcasts.apple.com/us/new" target="_blank"><button class="sub-button">Podcasts</button></a>
+    <a href="https://www.pandora.com/collection" target="_blank"><button class="sub-button">Russian Music / Pandora</button></a>
+    <a href="https://www.netflix.com" target="_blank"><button class="sub-button">Subtitled Anime / Shows</button></a>
+  </div>
+
+  <!-- Reading Group -->
+  <button class="category-button" data-group="reading">Reading ▼</button>
+  <div class="sub-buttons-container" id="reading">
+    <a href="https://lingua.com" target="_blank"><button class="sub-button">Lingua Short Stories</button></a>
+    <a href="https://rt.com" target="_blank"><button class="sub-button">News in Russian</button></a>
+  </div>
+
+  <!-- Practice Group -->
+  <button class="category-button" data-group="practice">Practice ▼</button>
+  <div class="sub-buttons-container" id="practice">
+    <a href="https://www.duolingo.com" target="_blank"><button class="sub-button">Duolingo</button></a>
+    <a href="https://apps.ankiweb.net" target="_blank"><button class="sub-button">Anki / Flashcards</button></a>
+    <a href="https://docs.google.com" target="_blank"><button class="sub-button">Writing Practice / Journal</button></a>
+  </div>
+
+  <!-- Reference Group -->
+  <button class="category-button" data-group="reference">Reference ▼</button>
+  <div class="sub-buttons-container" id="reference">
+    <a href="https://www.gramota.ru" target="_blank"><button class="sub-button">Grammar Reference</button></a>
+    <a href="https://www.reverso.net" target="_blank"><button class="sub-button">Translator / Dictionary</button></a>
+  </div>
+
+  <!-- Back to main homepage -->
+  <a href="index.html"><button class="category-button back-button">Back to Home</button></a>
+
+</div>
+
+<script>
+  // Floating particles
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.width = particle.style.height = `${Math.random() * 10 + 5}px`;
+    particle.style.left = `${Math.random() * 100}vw`;
+    particle.style.animationDuration = `${10 + Math.random() * 20}s`;
+    particle.style.animationDelay = `${Math.random() * 10}s`;
+    document.body.appendChild(particle);
+  }
+
+  // Toggle sub-buttons for each category
+  const categoryButtons = document.querySelectorAll('.category-button');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const groupId = button.dataset.group;
+      if (!groupId) return; // Skip Back button
+      const subButtons = document.querySelectorAll(`#${groupId} .sub-button`);
+      subButtons.forEach((btn, i) => {
+        setTimeout(() => {
+          btn.classList.toggle('show');
+        }, i * 100);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
