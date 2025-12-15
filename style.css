@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  animation: gradientShift 30s ease infinite;
+  background: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
+  background-size: 400% 400%;
+  color: #e0e0ff
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  overflow: auto;
+  position: relative;
+  text-align: center;
+}
