@@ -23,18 +23,18 @@
 
     <button class='category-button' id='productivity-main'>Productivity</button>
 
-    <div class='sub-buttons'>
+    <div class='prod-buttons'>
       <a href='https://docs.google.com/spreadsheets/d/1JmLTt_JnRPE9IIthVcizowjl0m0Sp4HYYNiuany2Xr4/edit?gid=166282674#gid=166282674' target='_blank'>
-        <button class='sub-button'>Todo</button>
+        <button class='prod-button'>Todo</button>
       </a>
       <a href='' target='_blank'>
-        <button class='sub-button'>Check-In</button>
+        <button class='prod-button'>Check-In</button>
       </a>
       <a href='https://www.rocketmoney.com/' target='_blank'>
-        <button class='sub-button'>Rocket Money</button>
+        <button class='prod-button'>Rocket Money</button>
       </a>
       <a href='https://docs.google.com/spreadsheets/d/1W5TAPTEVBXBEA7rMzt3xNBrFaUb0IiS2chbWt-A3qLc/edit?gid=1264581813#gid=1264581813' target='_blank'>
-        <button class='sub-button'>Language Tracker</button>
+        <button class='prod-button'>Language Tracker</button>
       </a>
     </div>
   </div>
@@ -44,10 +44,10 @@
     
     <button class="category-button" id="languages-main">Languages</button>
     
-    <div class="sub-buttons">
-      <a href="spanish.html"><button class="sub-button">Spanish</button></a>
-      <a href="japanese.html"><button class="sub-button">Japanese</button></a>
-      <a href="russian.html"><button class="sub-button">Russian</button></a>
+    <div class="lang-buttons">
+      <a href="spanish.html"><button class="lang-button">Spanish</button></a>
+      <a href="japanese.html"><button class="lang-button">Japanese</button></a>
+      <a href="russian.html"><button class="lang-button">Russian</button></a>
     </div>
   </div>
 
@@ -65,25 +65,29 @@
 
   // Languages toggle
   const mainButton = document.getElementById('languages-main');
-  const subButtons = document.querySelectorAll('.sub-button');
+  const langButtons = document.querySelectorAll('.lang-button');
 
   mainButton.addEventListener('click', () => {
-    subButtons.forEach((btn, i) => {
+    langButtons.forEach((btn, i) => {
       setTimeout(() => {
         btn.classList.toggle('show'); // toggle visibility
       }, i * 150); // stagger effect
     });
   });
+
+  // Productivity toggle
+  const mainProd = document.getElementById('productivity-main');
+  const prodButtons = document.querySelectorAll('.prod-button');
+
+  mainProd.addEventListener('click', () => {
+    prodButtons.forEach((btn, i) => {
+      setTimeout(() => {
+        btn.classList.toggle('show'); //toggle visibility
+      }, i * 150); //stagger effect
+    });
+  });
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
