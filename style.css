@@ -129,7 +129,7 @@ h1 {
     margin-bottom: 30px;
   }
 
-  .category-button, .lang-button, .prod-button {
+  .category-button, .lang-button, .prod-button, .sub-button {
     font-size: 1.2rem;
     min-width: 160px;
     padding: 14px 30px;
@@ -143,3 +143,4 @@ h1 {
   position: absolute;
   z-index: 0;
 }
+
