@@ -19,7 +19,7 @@
   <a href="travel.html" target="_blank"><button class="category-button">Travel & Memories</button></a>
   -->
 
-  <div class='productivity-container' id='productivity-container'>
+  <div class='productivity-container' id='productivity-container'> <!--start links to productivity buttons-->
 
     <button class='category-button' id='productivity-main'>Productivity</button>
 
@@ -48,6 +48,26 @@
       <a href="spanish.html"><button class="lang-button">Spanish</button></a>
       <a href="japanese.html"><button class="lang-button">Japanese</button></a>
       <a href="russian.html"><button class="lang-button">Russian</button></a>
+    </div>
+  </div>
+
+  <div class='music-container' id='music container'> <!--start music buttons-->
+
+    <button class='category-button' id='music-main'>Music</button>
+
+    <div class='music-buttons'>
+      <a href='https://music.apple.com/library/playlist/p.LV0PB8ZCZYlDovo' target='blank'>
+        <button class='music-button'>Quarantine</button>
+      </a>
+      <a href='https://music.apple.com/library/playlist/p.QvDQBqQh7YVoMlM' target='blank'>
+        <button class='music-button'>Asian Lofi</button>
+      </a>
+      <a href='https://www.youtube.com/c/LofiGirl' target='blank'>
+        <button class='music-button'>Lofi Girl</button>
+      </a>
+      <a href='https://www.pandora.com/station/play/185245721195193502' target='blank'>
+        <button class='music-button'>Mo' Energy</button>
+      </a>
     </div>
   </div>
 
@@ -82,6 +102,18 @@
   mainProd.addEventListener('click', () => {
     prodButtons.forEach((btn, i) => {
       setTimeout(() => {
+        btn.classList.toggle('show'); //toggle visibility
+      }, i * 150); //stagger effect
+    });
+  });
+
+  // Music toggle
+  const mainMusic = document.getElementById('music-main');
+  const musicButtons = document.querySelectorAll('.music-button');
+
+  mainMusic.addEventListener('click', () => {
+    musicButtons.forEach((btn, i) => {
+      setTimeout (() => {
         btn.classList.toggle('show'); //toggle visibility
       }, i * 150); //stagger effect
     });
