@@ -23,7 +23,7 @@ body {
   text-align: center;
 }
 
-.category-button, .lang-button, .prod-button, .sub-button {
+.category-button, .lang-button, .music-button, .prod-button, .sub-button {
   animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
   background: linear-gradient(135deg, #cfa0ff, #7df9ff);
   border: none;
@@ -42,7 +42,7 @@ body {
   z-index: 1;
 }
 
-.category-button::before, .lang-button::before, prod-button::before, .sub-button::before {
+.category-button::before, .lang-button::before, .music-button::before, prod-button::before, .sub-button::before {
   background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 80%);
   content: '';
   height: 200%;
@@ -56,7 +56,7 @@ body {
   width: 50%;
 }
 
-.category-button:hover::before, .lang-button:hover::before, .prod-button:hover::before, .sub-button:hover::before {
+.category-button:hover::before, .lang-button:hover::before, .music-button:hover::before, .prod-button:hover::before, .sub-button:hover::before {
   animation: neonFlare 0.8s forwards;
 }
 
@@ -103,14 +103,14 @@ h1 {
   z-index: 1;
 }
 
-.lang-button, .prod-button, .sub-button {
+.lang-button, .music-button, .prod-button, .sub-button {
   opacity: 0;
   pointer-events: none;
   transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.lang-button.show, .prod-button.show, .sub-button.show {
+.lang-button.show, .music-button.show, .prod-button.show, .sub-button.show {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -129,7 +129,7 @@ h1 {
     margin-bottom: 30px;
   }
 
-  .category-button, .lang-button, .prod-button, .sub-button {
+  .category-button, .lang-button, .music-button, .prod-button, .sub-button {
     font-size: 1.2rem;
     min-width: 160px;
     padding: 14px 30px;
@@ -143,6 +143,3 @@ h1 {
   position: absolute;
   z-index: 0;
 }
-
-
-
