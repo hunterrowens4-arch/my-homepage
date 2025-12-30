@@ -45,7 +45,7 @@ body {
 .category-button::before, .lang-button::before, prod-button::before, .sub-button::before {
   background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 80%);
   content: '';
-  height: 200%
+  height: 200%;
   left: -75%;
   opacity: 0;
   pointer-events: none;
@@ -143,5 +143,6 @@ h1 {
   position: absolute;
   z-index: 0;
 }
+
 
 
