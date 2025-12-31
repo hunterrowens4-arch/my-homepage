@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violet Tide - Recipes</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='style.css'
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Recipe Book</h1>
+    <p class='subtitle'>Browse, search, and explore. Your taste buds will thank you later.</p>
+  </header>
+
+  <section class='recipe-controls'>
+    <input id='search' type='text' placeholder='Search recipes...'>
+
+    <div class='filters'>
+      <button class='active' onclick="filterRecipes('all')">All</button>
+      <button onclick="filterRecipes('food')">Food</button>
+      <button onclick="filterRecipes('drink')">Drinks</button>
+      <button onclick="filterRecipes('shot')">Shots</button>
+    </div>
+  </section>
+
+  <section class='recipe-grid' id='recipeGrid'>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-vvpQea8eGRDLBYBK7am0UR_AungwB0Osg&s'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>Prosecco New Year Spritz</h2>
+        <ol>
+          <li>0.5 - 1 oz Peach Schnapps</li>
+          <li>1 oz Vodka</li>
+          <li>A splash of OJ or Lemonade</li>
+          <li>Top w/ Prosecco</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://www.liquor.com/thmb/G5R_Y6cS-voBV1hYqI2mtoovoTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/moscow-mule-4000x4000-primary-ig-3a364d63e57b4a9b8cf82ec1dc54eb30.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>Midnight Mule</h2>
+        <ol>
+          <li>0.5 - 1 oz Blackberry Puree/Liqueur</li>
+          <li>The Juice from 1/2 a Lime</li>
+          <li>2 oz Vodka</li>
+          <li>Top w/ Ginger Beer</li>
+          <li>Optional: Pinch of Edible Glitter</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWBBmK8dNqy2leYo4oulNRip5UkHDSelajg&s'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>Sparkling Midnight Mule</h2>
+        <ol>
+          <li>The Juice from 1/2 a Lime</li>
+          <li>1.5 oz Vodka</li>
+          <li>Top w/ Ginger Beer</li>
+          <li>Finish w/ a Float of Prosecco</li>
+          <li>Optional: Pinch of Edible Glitter</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://www.liquor.com/thmb/by95CAoF-nj4w1til5itnQFFrg8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2016__12__22114511__vodka-red-bull-720x720-recipe-b16a667ca354445799610e39be61e40a.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>Midnight Spark</h2>
+        <ol>
+          <li>A squeeze of Lime</li>
+          <li>1.5 - 2 oz Vodka</li>
+          <li>Fill the Glass 2/3 of the way w/ Red Bull</li>
+          <li>Top w/ Prosecco</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://t3.ftcdn.net/jpg/15/85/62/22/360_F_1585622243_M0nPuNdzTtYKUv2v1aINKc0m4sfBYi29.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>Blackout Gold Rush</h2>
+        <ol>
+          <li>A squeeze of Citrus</li>
+          <li>0.5 - 1 oz Blackberry Syrup/Puree/Liqueur</li>
+          <li>2 oz Vodka</li>
+          <li>Fill w/ Red Bull</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://thumbs.dreamstime.com/b/refreshing-lemonade-bubbles-glistening-citrus-slice-tall-glass-filled-bubbly-garnished-lemon-condensation-create-395941756.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>The Countdown Charger</h2>
+        <ol>
+          <li>2 oz Vodka</li>
+          <li>Fill w/ Red Bull</li>
+          <li>A Splash of OJ or Lemonade</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://cb.scene7.com/is/image/Crate/TourChampagneGlass8ozSSS22?$web_pdp_main_carousel_med$'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <h2>Red Bull Sparkling Toast</h2>
+        <ol>
+          <li>1 part Red Bull</li>
+          <li>1 part Prosecco</li>
+          <li>A Squeeze of Citrus</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+      <img src='https://homebodyeats.com/wp-content/uploads/2023/05/vegas-bomb.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Shot</span>
+        <h2>Sparkling Celebration</h2>
+        <ol>
+          <li>0.5 oz Peach Schnapps</li>
+          <li>1 oz Vodka</li>
+          <li>A Splash of Prosecco</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+      <img src='https://www.allrecipes.com/thmb/u5TNkzT67VvBypKaj5dhXSgQzO0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27114-Chocolate-Cake-Shot-3x4-0254-50c8f4b28c1340e4b8e169970d7e308c.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Shot</span>
+        <h2>Birthday Cake</h2>
+        <ol>
+          <li>1 part Vanilla Vodka</li>
+          <li>1 part Frangelico</li>
+          <li>Optional: Sugar Rim and Lemon Bite</li>
+        </ol>
+      </div>
+    </a>
+
+  </section>
+
+  <script>
+
+  function filterRecipes(category) {
+    document.querySelectorAll(".filters button").forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+
+    document.querySelectorAll(".recipe-card").forEach(card => {
+      card.style.display = (category === "all" || card.dataset.category === category)
+        ? "block"
+        : "none";
+    });
+  };
+  </script>
+
+</body>
+</html>
