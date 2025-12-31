@@ -10,61 +10,83 @@
 </head>
 
 <body>
-  <h1>Violet Tide</h1>
 
-  <!-- Main buttons -->
-  <!-- Buttons not ready, being commented out until a later date
-  <a href="anime.html" target="_blank"><button class="category-button">Anime</button></a>
-  <a href="gaming.html" target="_blank"><button class="category-button">Gaming</button></a>
-  <a href="travel.html" target="_blank"><button class="category-button">Travel & Memories</button></a>
-  -->
+  <div id='background-wrapper'></div> <!--houses the bubble animation to keep scroll bars from freaking out-->
+  <div id='content'>
 
-  <div class='productivity-container' id='productivity-container'> <!--start links to productivity buttons-->
+    <h1>Violet Tide</h1>
 
-    <button class='category-button' id='productivity-main'>Productivity</button>
+    <!-- Main buttons -->
+    <!-- Buttons not ready, being commented out until a later date
+    <a href="anime.html" target="_blank"><button class="category-button">Anime</button></a>
+    <a href="gaming.html" target="_blank"><button class="category-button">Gaming</button></a>
+    <a href="travel.html" target="_blank"><button class="category-button">Travel & Memories</button></a>
+    -->
 
-    <div class='prod-buttons'>
-      <a href='https://docs.google.com/spreadsheets/d/1JmLTt_JnRPE9IIthVcizowjl0m0Sp4HYYNiuany2Xr4/edit?gid=166282674#gid=166282674' target='_blank'><button class='prod-button'>Todo</button></a>
-      <a href='https://drive.google.com/drive/folders/1epP2dpT9eSv5SaJzNxE85F95w1_sjWo4' target='_blank'><button class='prod-button'>Check-In</button></a>
-      <a href='https://www.rocketmoney.com/' target='_blank'><button class='prod-button'>Rocket Money</button></a>
-      <a href='https://docs.google.com/spreadsheets/d/1W5TAPTEVBXBEA7rMzt3xNBrFaUb0IiS2chbWt-A3qLc/edit?gid=1264581813#gid=1264581813' target='_blank'><button class='prod-button'>Language Tracker</button></a>
+    <div class='productivity-container' id='productivity-container'> <!--start links to productivity buttons-->
+
+      <button class='category-button' id='productivity-main'>Productivity</button>
+
+      <div class='prod-buttons'>
+        <a href='https://docs.google.com/spreadsheets/d/1JmLTt_JnRPE9IIthVcizowjl0m0Sp4HYYNiuany2Xr4/edit?gid=166282674#gid=166282674' target='_blank'><button class='prod-button'>Todo</button></a>
+        <a href='https://drive.google.com/drive/folders/1epP2dpT9eSv5SaJzNxE85F95w1_sjWo4' target='_blank'><button class='prod-button'>Check-In</button></a>
+        <a href='https://www.rocketmoney.com/' target='_blank'><button class='prod-button'>Rocket Money</button></a>
+        <a href='https://docs.google.com/spreadsheets/d/1W5TAPTEVBXBEA7rMzt3xNBrFaUb0IiS2chbWt-A3qLc/edit?gid=1264581813#gid=1264581813' target='_blank'><button class='prod-button'>Language Tracker</button></a>
+      </div>
     </div>
-  </div>
   
-  <!-- Languages at bottom -->
-  <div class="languages-container" id="languages-container">
+    <!-- Languages at bottom -->
+    <div class="languages-container" id="languages-container">
     
-    <button class="category-button" id="languages-main">Languages</button>
+      <button class="category-button" id="languages-main">Languages</button>
     
-    <div class="lang-buttons">
-      <a href="spanish.html"><button class="lang-button">Spanish</button></a>
-      <a href="japanese.html"><button class="lang-button">Japanese</button></a>
-      <a href="russian.html"><button class="lang-button">Russian</button></a>
+      <div class="lang-buttons">
+        <a href="spanish.html"><button class="lang-button">Spanish</button></a>
+        <a href="japanese.html"><button class="lang-button">Japanese</button></a>
+        <a href="russian.html"><button class="lang-button">Russian</button></a>
+      </div>
     </div>
-  </div>
 
-  <div class='music-container' id='music container'> <!--start music buttons-->
+    <div class='music-container' id='music container'> <!--start music buttons-->
 
-    <button class='category-button' id='music-main'>Music</button>
+      <button class='category-button' id='music-main'>Music</button>
 
-    <div class='music-buttons'>
-      <a href='https://music.apple.com/library/playlist/p.LV0PB8ZCZYlDovo' target='blank'><button class='music-button'>Quarantine</button></a>
-      <a href='https://music.apple.com/library/playlist/p.QvDQBqQh7YVoMlM' target='blank'><button class='music-button'>Asian Lofi</button></a>
-      <a href='https://www.youtube.com/c/LofiGirl' target='blank'><button class='music-button'>Lofi Girl</button></a>
-      <a href='https://www.pandora.com/station/play/185245721195193502' target='blank'><button class='music-button'>Mo' Energy</button></a>
+      <div class='music-buttons'>
+        <a href='https://music.apple.com/library/playlist/p.LV0PB8ZCZYlDovo' target='blank'><button class='music-button'>Quarantine</button></a>
+        <a href='https://music.apple.com/library/playlist/p.QvDQBqQh7YVoMlM' target='blank'><button class='music-button'>Asian Lofi</button></a>
+        <a href='https://www.youtube.com/c/LofiGirl' target='blank'><button class='music-button'>Lofi Girl</button></a>
+        <a href='https://www.pandora.com/station/play/185245721195193502' target='blank'><button class='music-button'>Mo' Energy</button></a>
+      </div>
     </div>
+
   </div>
 
 <script>
   // Floating particles
+  const wrapper = document.getElementById('background-wrapper');
   for (let i = 0; i < 20; i++) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
-    particle.style.width = particle.style.height = `${Math.random() * 10 + 5}px`;
-    particle.style.left = `${Math.random() * 100}vw`;
+
+    const size = Math.random() * 10 + 5;
+    particle.style.width = particle.style.height = `${size}px`;
+
+    // random horizontal start
+    const startX = Math.random() * 100;
+    particle.style.left = `${startX}vw`;
+
+    // random vertical start
+    const startY = Math.random() * 100;
+    particle.style.top = `${startY}vh`;
+
+    // random animation duration and delay
     particle.style.animationDuration = `${10 + Math.random() * 20}s`;
-    particle.style.animationDelay = `${Math.random() * 10}s`;
-    document.body.appendChild(particle);
+
+    // random horizontal drift (angle)
+    const drift = (Math.random() * 2 - 1) * 50;
+    particle.style.setProperty('--drift', `${drift}px`);
+
+    wrapper.appendChild(particle);
   }
 
   // Languages toggle
@@ -107,7 +129,3 @@
 
 </body>
 </html>
-
-
-
-
