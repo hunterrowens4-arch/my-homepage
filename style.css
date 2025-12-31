@@ -23,6 +23,10 @@ body {
   text-align: center;
 }
 
+body, html {
+  overflow: hidden;
+}
+
 .category-button, .lang-button, .music-button, .prod-button, .sub-button {
   animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
   background: linear-gradient(135deg, #cfa0ff, #7df9ff);
@@ -143,3 +147,4 @@ h1 {
   position: absolute;
   z-index: 0;
 }
+
