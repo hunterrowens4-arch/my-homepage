@@ -33,7 +33,7 @@ body {
   text-align: center;
 }
 
-.category-button, .filters button, .lang-button, .music-button, .prod-button, .sub-button {
+.category-button, .filters button, .lang-button, .music-button, .prod-button, .recipe-button, .sub-button {
   animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
   background: linear-gradient(135deg, #cfa0ff, #7df9ff);
   border: none;
