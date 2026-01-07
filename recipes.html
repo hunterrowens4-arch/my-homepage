@@ -21,12 +21,26 @@
   <section class='recipe-controls'>
     <input id='search' type='text' placeholder='Search recipes...'>
 
-    <div class='filters'>
-      <button class='active' onclick="filterRecipes('all')">All</button>
-      <button onclick="filterRecipes('food')">Food</button>
-      <button onclick="filterRecipes('drink')">Drinks</button>
-      <button onclick="filterRecipes('shot')">Shots</button>
+    <div class='filters type-filters'>
+      <button class='active' data-type='all'>All</button>
+      <button data-type='food'>Food</button>
+      <button data-type='drink'>Drinks</button>
+      <button data-type='shot'>Shots</button>
     </div>
+
+    <div class='filters base-filters'>
+      <button class='active' data-base='all'>All</button>
+      <button data-type='rum'>Rum</button>
+      <button data-type='vodka'>Vodka</button>
+      <button data-type='whiskey'>Whiskey</button>
+    </div>
+
+    <div class='filters event-filters'>
+      <button class='active' data-event='all'>All</button>
+      <button data-type='nye25'>NYE '25</button>
+      <button data-type='staycation'>Staycation</button>
+    </div>
+
   </section>
 
   <section class='recipe-grid' id='recipeGrid'>
@@ -245,17 +259,68 @@
   <script>
 
   // filter functionality
-  function filterRecipes(category) {
-    document.querySelectorAll(".filters button").forEach(btn => btn.classList.remove("active"));
-    event.target.classList.add("active");
 
-    document.querySelectorAll(".recipe-card").forEach(card => {
-      card.style.display =
-        category === "all" || card.dataset.category === category
-          ? "block"
-          : "none";
+  document.addEventListener("DOMContentLoaded", () => {
+
+    let activeFilters = {
+      category: "all",
+      base: "all",
+      event: "all"
+    };
+  
+    document.querySelectorAll(".type-filters button").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".type-filters button")
+          .forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+        activeFilters.category = button.dataset.type;
+        applyFilters();
+      });
     });
-  };
+
+    document.querySelectorAll(".base-filters button").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".base-filters button")
+          .forEach(btn => btn.classList.remove("active"));
+ 
+        button.classList.add("active");
+        activeFilters.base = button.dataset.base;
+        applyFilters();
+      });
+    });
+
+    document.querySelectorAll(".event-filters button").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".event-filters button")
+          .forEach(btn => btn.classList.remove("active"));
+  
+        button.classList.add("active");
+        activeFilters.event = button.dataset.event;
+        applyFilters();
+      });
+    });
+
+    function applyFilters() {
+      document.querySelectorAll(".recipe-card").forEach(card => {
+        const matchesCategory =
+          activeFilters.category === "all" ||
+          card.dataset.category === activeFilters.category;
+
+        const matchesBase =
+          activeFilters.base === "all" ||
+          card.dataset.base === activeFilters.base;
+
+         const matchesEvent =
+          activeFilters.event === "all" ||
+          card.dataset.event === activeFilters.event;
+
+        card.style.display =
+          matchesCategory && matchesBase && matchesEvent ? "block" : "none";
+      });
+    }
+
+});
 
   // Floating particles
   const wrapper = document.getElementById('background-wrapper');
