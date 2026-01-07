@@ -11,6 +11,8 @@
 
 <body>
 
+  <div id='background-wrapper'></div> <!-- houses the bubble animation to keep scroll bars from freaking out -->
+
   <header>
     <h1>Recipe Book</h1>
     <p class='subtitle'>Browse, search, and explore. Your taste buds will thank you later.</p>
@@ -29,16 +31,60 @@
 
   <section class='recipe-grid' id='recipeGrid'>
 
+    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+      <img src='https://www.allrecipes.com/thmb/u5TNkzT67VvBypKaj5dhXSgQzO0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27114-Chocolate-Cake-Shot-3x4-0254-50c8f4b28c1340e4b8e169970d7e308c.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Shot</span>
+        <span class='desc'>NYE '25</span>
+        <h2>Birthday Cake</h2>
+        <ol>
+          <li>1 part Vanilla Vodka</li>
+          <li>1 part Frangelico</li>
+          <li>Optional: Sugar Rim and Lemon Bite</li>
+        </ol>
+      </div>
+    </a>
+
     <a class='recipe-card' href='' data-category='drink' target='_blank'>
-      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-vvpQea8eGRDLBYBK7am0UR_AungwB0Osg&s'>
+      <img src='https://t3.ftcdn.net/jpg/15/85/62/22/360_F_1585622243_M0nPuNdzTtYKUv2v1aINKc0m4sfBYi29.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
-        <h2>Prosecco New Year Spritz</h2>
+        <span class='desc'>NYE '25</span>
+        <h2>Blackout Gold Rush</h2>
         <ol>
-          <li>0.5 - 1 oz Peach Schnapps</li>
-          <li>1 oz Vodka</li>
-          <li>A splash of OJ or Lemonade</li>
-          <li>Top w/ Prosecco</li>
+          <li>A squeeze of Citrus</li>
+          <li>0.5 oz Blackberry Syrup/Puree/Liqueur</li>
+          <li>2 oz Vodka</li>
+          <li>Fill w/ Red Bull</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://thumbs.dreamstime.com/b/refreshing-lemonade-bubbles-glistening-citrus-slice-tall-glass-filled-bubbly-garnished-lemon-condensation-create-395941756.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <span class='desc'>NYE '25</span>
+        <h2>The Countdown Charger</h2>
+        <ol>
+          <li>2 oz Vodka</li>
+          <li>Fill w/ Red Bull</li>
+          <li>A Splash of OJ or Lemonade</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://www.liquor.com/thmb/rxbQEXR-CQpExjfS8xtOAWXLovM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/bourbon-old-fashioned-4000x4000-primary-ig-f0ce04bec6754db187ab1e8a16fd45c3.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <span class='desc'>Staycation '26</span>
+        <h2>Driftwood Reserve</h2>
+        <ol>
+          <li>0.25 oz Lemon Juice</li>
+          <li>0.5 oz Vanilla (or maple) Syrup</li>
+          <li>2 oz Whiskey</li>
+          <li>1 Dash Orange Bitters</li>
         </ol>
       </div>
     </a>
@@ -47,6 +93,7 @@
       <img src='https://www.liquor.com/thmb/G5R_Y6cS-voBV1hYqI2mtoovoTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/moscow-mule-4000x4000-primary-ig-3a364d63e57b4a9b8cf82ec1dc54eb30.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
+        <span class='desc'>NYE '25</span>
         <h2>Midnight Mule</h2>
         <ol>
           <li>0.5 - 1 oz Blackberry Puree/Liqueur</li>
@@ -59,9 +106,97 @@
     </a>
 
     <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://www.liquor.com/thmb/by95CAoF-nj4w1til5itnQFFrg8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2016__12__22114511__vodka-red-bull-720x720-recipe-b16a667ca354445799610e39be61e40a.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <span class='desc'>NYE '25</span>
+        <h2>Midnight Spark</h2>
+        <ol>
+          <li>A squeeze of Lime</li>
+          <li>1.5 - 2 oz Vodka</li>
+          <li>Fill the Glass 2/3 of the way w/ Red Bull</li>
+          <li>Top w/ Prosecco</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-vvpQea8eGRDLBYBK7am0UR_AungwB0Osg&s'>
+      <div class='card-content'>
+        <span class='tag'>Shooter</span>
+        <span class='desc'>Staycation '26</span>
+        <h2>Night Swim</h2>
+        <ol>
+          <li>0.25 oz Lemon Juice</li>
+          <li>0.5 oz Blackberry Liqueur</li>
+          <li>1 oz Vodka</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-vvpQea8eGRDLBYBK7am0UR_AungwB0Osg&s'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <span class='desc'>NYE '25</span>
+        <h2>Prosecco New Year Spritz</h2>
+        <ol>
+          <li>0.5 - 1 oz Peach Schnapps</li>
+          <li>1 oz Vodka</li>
+          <li>A splash of OJ or Lemonade</li>
+          <li>Top w/ Prosecco</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://cb.scene7.com/is/image/Crate/TourChampagneGlass8ozSSS22?$web_pdp_main_carousel_med$'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <span class='desc'>NYE '25</span>
+        <h2>Red Bull Sparkling Toast</h2>
+        <ol>
+          <li>1 part Red Bull</li>
+          <li>1 part Prosecco</li>
+          <li>A Squeeze of Citrus</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://imageio.forbes.com/specials-images/imageserve/674a7c78386fdb04305b934f/Sparkling-water-glass-on-a-stone-parapet-with-a-mountain-view--Cool-glass-of-mineral/0x0.jpg?format=jpg&width=480'>
+      <div class='card-content'>
+        <span class='tag'>Drink</span>
+        <span class='desc'>Staycation '26</span>
+        <h2>Seaside Whisper</h2>
+        <ol>
+          <li>0.5 oz Lime Juice</li>
+          <li>0.75 oz St-Germain</li>
+          <li>2 oz Vodka</li>
+          <li>Top w/ Sparkling Water</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+      <img src='https://homebodyeats.com/wp-content/uploads/2023/05/vegas-bomb.jpg'>
+      <div class='card-content'>
+        <span class='tag'>Shot</span>
+        <span class='desc'>NYE '25</span>
+        <h2>Sparkling Celebration</h2>
+        <ol>
+          <li>0.5 oz Peach Schnapps</li>
+          <li>1 oz Vodka</li>
+          <li>A Splash of Prosecco</li>
+        </ol>
+      </div>
+    </a>
+
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWBBmK8dNqy2leYo4oulNRip5UkHDSelajg&s'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
+        <span class='desc'>NYE '25</span>
         <h2>Sparkling Midnight Mule</h2>
         <ol>
           <li>The Juice from 1/2 a Lime</li>
@@ -73,82 +208,31 @@
       </div>
     </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
-      <img src='https://www.liquor.com/thmb/by95CAoF-nj4w1til5itnQFFrg8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2016__12__22114511__vodka-red-bull-720x720-recipe-b16a667ca354445799610e39be61e40a.jpg'>
-      <div class='card-content'>
-        <span class='tag'>Drink</span>
-        <h2>Midnight Spark</h2>
-        <ol>
-          <li>A squeeze of Lime</li>
-          <li>1.5 - 2 oz Vodka</li>
-          <li>Fill the Glass 2/3 of the way w/ Red Bull</li>
-          <li>Top w/ Prosecco</li>
-        </ol>
-      </div>
-    </a>
-
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
-      <img src='https://t3.ftcdn.net/jpg/15/85/62/22/360_F_1585622243_M0nPuNdzTtYKUv2v1aINKc0m4sfBYi29.jpg'>
-      <div class='card-content'>
-        <span class='tag'>Drink</span>
-        <h2>Blackout Gold Rush</h2>
-        <ol>
-          <li>A squeeze of Citrus</li>
-          <li>0.5 - 1 oz Blackberry Syrup/Puree/Liqueur</li>
-          <li>2 oz Vodka</li>
-          <li>Fill w/ Red Bull</li>
-        </ol>
-      </div>
-    </a>
-
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
-      <img src='https://thumbs.dreamstime.com/b/refreshing-lemonade-bubbles-glistening-citrus-slice-tall-glass-filled-bubbly-garnished-lemon-condensation-create-395941756.jpg'>
-      <div class='card-content'>
-        <span class='tag'>Drink</span>
-        <h2>The Countdown Charger</h2>
-        <ol>
-          <li>2 oz Vodka</li>
-          <li>Fill w/ Red Bull</li>
-          <li>A Splash of OJ or Lemonade</li>
-        </ol>
-      </div>
-    </a>
-
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
-      <img src='https://cb.scene7.com/is/image/Crate/TourChampagneGlass8ozSSS22?$web_pdp_main_carousel_med$'>
-      <div class='card-content'>
-        <span class='tag'>Drink</span>
-        <h2>Red Bull Sparkling Toast</h2>
-        <ol>
-          <li>1 part Red Bull</li>
-          <li>1 part Prosecco</li>
-          <li>A Squeeze of Citrus</li>
-        </ol>
-      </div>
-    </a>
-
     <a class='recipe-card' href='' data-category='shot' target='_blank'>
-      <img src='https://homebodyeats.com/wp-content/uploads/2023/05/vegas-bomb.jpg'>
+      <img src='https://cdn.shopify.com/s/files/1/0025/8100/4361/articles/los-sundays-tequila-sunrise-shot.png?v=1693502077'>
       <div class='card-content'>
-        <span class='tag'>Shot</span>
-        <h2>Sparkling Celebration</h2>
+        <span class='tag'>Shooter</span>
+        <span class='desc'>Staycation '26</span>
+        <h2>Sunset Spark</h2>
         <ol>
-          <li>0.5 oz Peach Schnapps</li>
+          <li>0.5 oz Blood Orange Juice<br>(or regular orange juice)</li>
           <li>1 oz Vodka</li>
-          <li>A Splash of Prosecco</li>
+          <li>Splash of Grenadine</li>
         </ol>
       </div>
     </a>
 
-    <a class='recipe-card' href='' data-category='shot' target='_blank'>
-      <img src='https://www.allrecipes.com/thmb/u5TNkzT67VvBypKaj5dhXSgQzO0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27114-Chocolate-Cake-Shot-3x4-0254-50c8f4b28c1340e4b8e169970d7e308c.jpg'>
+    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+      <img src='https://upload.wikimedia.org/wikipedia/commons/3/3a/Pool-side_Mimosas_at_The_Standard_Hotel.jpg'>
       <div class='card-content'>
-        <span class='tag'>Shot</span>
-        <h2>Birthday Cake</h2>
+        <span class='tag'>Drink - Batched</span>
+        <span class='desc'>Staycation '26</span>
+        <h2>Villa Spritz</h2>
         <ol>
-          <li>1 part Vanilla Vodka</li>
-          <li>1 part Frangelico</li>
-          <li>Optional: Sugar Rim and Lemon Bite</li>
+          <li>1 c Grapefruit Juice</li>
+          <li>1.5 c Vodka</li>
+          <li>2 c Orange Juice</li>
+          <li>1 c Prosecco<br>(add just before serving)</li>
         </ol>
       </div>
     </a>
@@ -160,16 +244,46 @@
 
   <script>
 
+  // filter functionality
   function filterRecipes(category) {
     document.querySelectorAll(".filters button").forEach(btn => btn.classList.remove("active"));
     event.target.classList.add("active");
 
     document.querySelectorAll(".recipe-card").forEach(card => {
-      card.style.display = (category === "all" || card.dataset.category === category)
-        ? "block"
-        : "none";
+      card.style.display =
+        category === "all" || card.dataset.category === category
+          ? "block"
+          : "none";
     });
   };
+
+  // Floating particles
+  const wrapper = document.getElementById('background-wrapper');
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    const size = Math.random() * 10 + 5;
+    particle.style.width = particle.style.height = `${size}px`;
+
+    // random horizontal start
+    const startX = Math.random() * 100;
+    particle.style.left = `${startX}vw`;
+
+    // random vertical start
+    const startY = Math.random() * 100;
+    particle.style.top = `${startY}vh`;
+
+    // random animation duration and delay
+    particle.style.animationDuration = `${10 + Math.random() * 20}s`;
+
+    // random horizontal drift (angle)
+    const drift = (Math.random() * 2 - 1) * 50;
+    particle.style.setProperty('--drift', `${drift}px`);
+
+    wrapper.appendChild(particle);
+  }
+
   </script>
 
 </body>
