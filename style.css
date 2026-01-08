@@ -243,6 +243,16 @@ li {
   }
 
   .recipe-grid {
-    column-count: 2;
+    column-count: 1;
+    column-gap: 1em;
+    line-height: 1.5em;
+  }
+
+  .recipe-grid h2 {
+    margin: 0.5em 0 0;
+  }
+
+  .recipe-grid span {
+    line-height: 1em;
   }
 }
