@@ -95,6 +95,24 @@ body {
   margin-bottom: 3px;
 }
 
+.filters {
+  background: hsla(0,0%,0%,0.5);
+  border: 2px solid #cfa0ff;
+  display: inline-block;
+  text-align: center;
+  width: 95%;
+}
+
+
+.filters button.active {
+  font-weight: 800;
+}
+
+.filters h2 {
+  font-size: 1em;
+  margin: 10px 0 0;
+}
+
 @keyframes buttonBaseGlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -156,6 +174,61 @@ li {
   text-align: left;
 }
 
+.particle {
+  animation: float 15s linear infinite;
+  background: rgba(125,249,255,0.3);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+}
+
+.recipe-card {
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 14px;
+  color: inherit;
+  display: block;
+  margin: 0 0 2em;
+  overflow: hidden;
+  text-decoration: none;
+  transition: .3s;
+  width: 100%;
+}
+
+.recipe-controls {
+  width: 100%;
+}
+
+.recipe-grid {
+  column-count: 3;
+  column-gap: 2em;
+  max-width: 1100px;
+  padding: 20px;
+  width: 100%
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 170px !important;
+  object-fit: cover;
+}
+
+#search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  opacity: .8;
+  margin: -10px 0 25px;
+}
+
 @media (max-width: 600px) {
   
   h1 {
@@ -168,57 +241,8 @@ li {
     min-width: 160px;
     padding: 14px 30px;
   }
-}
 
-.particle {
-  animation: float 15s linear infinite;
-  background: rgba(125,249,255,0.3);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-}
-
-.subtitle {
-  opacity: .8;
-  margin: -10px 0 25px;
-}
-
-#search {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 15px;
-}
-
-.filters button.active {
-  font-weight: 800;
-}
-
-.recipe-grid {
-  max-width: 1100px;
-  display: grid;
-  gap: 36px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  padding: 20px;
-}
-
-.recipe-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.2);
-  transition: .3s;
-}
-
-.recipe-card:hover {
-  transform: translateY(-4px) scale(1.02);
-}
-
-.recipe-card img {
-  width: 100%;
-  height: 170px !important;
-  object-fit: cover;
+  .recipe-grid {
+    column-count: 2;
+  }
 }
