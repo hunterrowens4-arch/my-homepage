@@ -18,34 +18,40 @@
     <p class='subtitle'>Browse, search, and explore. Your taste buds will thank you later.</p>
   </header>
 
-  <section class='recipe-controls'>
+  <section class='recipe-controls'> <!-- houses the filter buttons -->
     <input id='search' type='text' placeholder='Search recipes...'>
 
-    <div class='filters type-filters'>
+    <div class='filters type-filters'> <!-- filter buttons for type of entry -->
       <button class='active' data-type='all'>All</button>
-      <button data-type='food'>Food</button>
+      <!-- commenting out food button due to current lack of utilization <button data-type='food'>Food</button> -->
       <button data-type='drink'>Drinks</button>
       <button data-type='shot'>Shots</button>
     </div>
 
-    <div class='filters base-filters'>
+    <div class='filters base-filters'> <!-- filter buttons for drink base -->
       <button class='active' data-base='all'>All</button>
-      <button data-type='rum'>Rum</button>
-      <button data-type='vodka'>Vodka</button>
-      <button data-type='whiskey'>Whiskey</button>
+      <button data-base='rum'>Rum</button>
+      <button data-base='vodka'>Vodka</button>
+      <button data-base='whiskey'>Whiskey</button>
+      <button data-base='other'>Other</button>
     </div>
 
-    <div class='filters event-filters'>
+    <div class='filters event-filters'> <!-- filter buttons for origin/event -->
       <button class='active' data-event='all'>All</button>
-      <button data-type='nye25'>NYE '25</button>
-      <button data-type='staycation'>Staycation</button>
+      <button data-event='nye25'>NYE '25</button>
+      <button data-event='staycation'>Staycation</button>
     </div>
 
   </section>
 
-  <section class='recipe-grid' id='recipeGrid'>
+  <section class='recipe-grid' id='recipeGrid'> <!-- houses the recipe cards -->
 
-    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+    <a class='recipe-card' href=''
+      data-category='shot'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://www.allrecipes.com/thmb/u5TNkzT67VvBypKaj5dhXSgQzO0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27114-Chocolate-Cake-Shot-3x4-0254-50c8f4b28c1340e4b8e169970d7e308c.jpg'>
       <div class='card-content'>
         <span class='tag'>Shot</span>
@@ -57,9 +63,15 @@
           <li>Optional: Sugar Rim and Lemon Bite</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'Birthday Cake' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://t3.ftcdn.net/jpg/15/85/62/22/360_F_1585622243_M0nPuNdzTtYKUv2v1aINKc0m4sfBYi29.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -72,9 +84,15 @@
           <li>Fill w/ Red Bull</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'Blackout Gold Rush' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://thumbs.dreamstime.com/b/refreshing-lemonade-bubbles-glistening-citrus-slice-tall-glass-filled-bubbly-garnished-lemon-condensation-create-395941756.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -86,9 +104,15 @@
           <li>A Splash of OJ or Lemonade</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'The Countdown Charger' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='whiskey'
+      data-event='staycation'
+      target='_blank'>
+
       <img src='https://www.liquor.com/thmb/rxbQEXR-CQpExjfS8xtOAWXLovM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/bourbon-old-fashioned-4000x4000-primary-ig-f0ce04bec6754db187ab1e8a16fd45c3.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -101,9 +125,15 @@
           <li>1 Dash Orange Bitters</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'Driftwood Reserve' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://www.liquor.com/thmb/G5R_Y6cS-voBV1hYqI2mtoovoTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/moscow-mule-4000x4000-primary-ig-3a364d63e57b4a9b8cf82ec1dc54eb30.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -117,9 +147,15 @@
           <li>Optional: Pinch of Edible Glitter</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'Midnight Mule' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://www.liquor.com/thmb/by95CAoF-nj4w1til5itnQFFrg8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2016__12__22114511__vodka-red-bull-720x720-recipe-b16a667ca354445799610e39be61e40a.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -132,9 +168,15 @@
           <li>Top w/ Prosecco</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+    </a> <!-- end of 'Midnight Spark' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='shot'
+      data-base='vodka'
+      data-event='starcation'
+      target='_blank'>
+
       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-vvpQea8eGRDLBYBK7am0UR_AungwB0Osg&s'>
       <div class='card-content'>
         <span class='tag'>Shooter</span>
@@ -146,9 +188,15 @@
           <li>1 oz Vodka</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'Night Swim' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-vvpQea8eGRDLBYBK7am0UR_AungwB0Osg&s'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -161,9 +209,15 @@
           <li>Top w/ Prosecco</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end of 'Prosecco New Year Spritz' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='other'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://cb.scene7.com/is/image/Crate/TourChampagneGlass8ozSSS22?$web_pdp_main_carousel_med$'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -175,9 +229,15 @@
           <li>A Squeeze of Citrus</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end 'Red Bull Sparkling Toast' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='Vodka'
+      data-event='staycation'
+      target='_blank'>
+
       <img src='https://imageio.forbes.com/specials-images/imageserve/674a7c78386fdb04305b934f/Sparkling-water-glass-on-a-stone-parapet-with-a-mountain-view--Cool-glass-of-mineral/0x0.jpg?format=jpg&width=480'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -190,9 +250,14 @@
           <li>Top w/ Sparkling Water</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+    </a> <!-- end 'Seaside Whisper' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='shot'
+      data-base='vodka'
+      target='_blank'>
+
       <img src='https://homebodyeats.com/wp-content/uploads/2023/05/vegas-bomb.jpg'>
       <div class='card-content'>
         <span class='tag'>Shot</span>
@@ -204,9 +269,15 @@
           <li>A Splash of Prosecco</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end 'Sparkling Celebration' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='nye25'
+      target='_blank'>
+
       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWBBmK8dNqy2leYo4oulNRip5UkHDSelajg&s'>
       <div class='card-content'>
         <span class='tag'>Drink</span>
@@ -220,9 +291,15 @@
           <li>Optional: Pinch of Edible Glitter</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='shot' target='_blank'>
+    </a> <!-- end 'Sparkling Midnight Mule' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='shot'
+      data-base='vodka'
+      data-event='staycation'
+      target='_blank'>
+
       <img src='https://cdn.shopify.com/s/files/1/0025/8100/4361/articles/los-sundays-tequila-sunrise-shot.png?v=1693502077'>
       <div class='card-content'>
         <span class='tag'>Shooter</span>
@@ -234,9 +311,15 @@
           <li>Splash of Grenadine</li>
         </ol>
       </div>
-    </a>
 
-    <a class='recipe-card' href='' data-category='drink' target='_blank'>
+    </a> <!-- end 'Sunset Spark' recipe -->
+
+    <a class='recipe-card' href=''
+      data-category='drink'
+      data-base='vodka'
+      data-event='staycation'
+      target='_blank'>
+
       <img src='https://upload.wikimedia.org/wikipedia/commons/3/3a/Pool-side_Mimosas_at_The_Standard_Hotel.jpg'>
       <div class='card-content'>
         <span class='tag'>Drink - Batched</span>
@@ -249,7 +332,8 @@
           <li>1 c Prosecco<br>(add just before serving)</li>
         </ol>
       </div>
-    </a>
+
+    </a> <!-- end 'Villa Spritz' recipe -->
 
   </section>
 
