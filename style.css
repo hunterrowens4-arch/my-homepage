@@ -1,3 +1,7 @@
+:root {
+  --primary-text-color: #cfa0ff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -34,7 +38,7 @@ body {
 }
 
 .card-content h2 {
-  margin: 0 15px 15px;
+  margin: 0 15px 7px;
 }
 
 .category-button, .filters button, .lang-button, .music-button, .prod-button, .recipe-button, .sub-button {
@@ -113,6 +117,63 @@ body {
   margin: 10px 0 0;
 }
 
+.game-card {
+  aspect-ratio: 1 / 1.2;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.game-column-layout {
+  column-count: 2;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.game-container {
+  background: rgba(0,0,0,0.2);
+  border: 2px solid black;
+  width: 40%;
+}
+
+.game-container h2 {
+  width: 100%;
+}
+
+.game-cover {
+  display; block;
+  width: 100%;
+  height: auto;
+}
+
+.game-title {
+  color: #1a0d2b;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  color: #cfa0ff;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  position: relative;
+  text-shadow: 0 0 20px rgba(207,160,255,0.8), 0 0 40px rgba(125,249,255,0.4);
+  z-index: 1;
+}
+
+h2 {
+  color: var(--primary-text-color);
+}
+
 @keyframes buttonBaseGlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -141,15 +202,6 @@ body {
   50% { box-shadow: 0 0 50px rgba(125,249,255,0.9), 0 0 45px rgba(207,160,255,0.7); }
 }
 
-h1 {
-  color: #cfa0ff;
-  font-size: 3rem;
-  margin-bottom: 50px;
-  position: relative;
-  text-shadow: 0 0 20px rgba(207,160,255,0.8), 0 0 40px rgba(125,249,255,0.4);
-  z-index: 1;
-}
-
 .lang-button, .music-button, .prod-button, .sub-button {
   opacity: 0;
   pointer-events: none;
@@ -172,6 +224,12 @@ h1 {
 li {
   padding: 0 10px;
   text-align: left;
+}
+
+p {
+  line-height: 1.25em;
+  margin: 0 10px 10px;
+  opacity: 0.8;
 }
 
 .particle {
@@ -256,4 +314,3 @@ li {
     line-height: 1em;
   }
 }
-
