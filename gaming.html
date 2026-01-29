@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violet Tide - Gaming</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='style.css'
+
+</head>
+
+<body>
+
+  <div id='background-wrapper'></div> <!-- houses the bubble animation to keep scroll bars from freaking out -->
+
+  <h1>Gaming</h1>
+
+  <section class='game-column-layout'>
+
+    <section class='game-container' id='backlog'> <!-- houses the backlog game cards -->
+
+      <h2>Backlog</h2>
+
+      <div class='game-card'>
+        <img class='game-cover' src='https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg'>
+      </div>
+
+    </section>
+
+    <section class='game-container' id='now-playing'> <!-- houses the now playing game cards -->
+
+      <h2>Now Playing</h2>
+
+      <div class='game-card'>
+        <img class='game-cover' src=''>
+        <span class='game-title'>Ghost of Tsushima</span>
+      </div>
+
+    </section>
+
+  </section>
+
+  <script>
+
+// Floating particles
+  const wrapper = document.getElementById('background-wrapper');
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    const size = Math.random() * 10 + 5;
+    particle.style.width = particle.style.height = `${size}px`;
+
+    // random horizontal start
+    const startX = Math.random() * 100;
+    particle.style.left = `${startX}vw`;
+
+    // random vertical start
+    const startY = Math.random() * 100;
+    particle.style.top = `${startY}vh`;
+
+    // random animation duration and delay
+    particle.style.animationDuration = `${10 + Math.random() * 20}s`;
+
+    // random horizontal drift (angle)
+    const drift = (Math.random() * 2 - 1) * 50;
+    particle.style.setProperty('--drift', `${drift}px`);
+
+    wrapper.appendChild(particle);
+  }
+    
+  </script>
+
+</body>
+</html>
