@@ -41,7 +41,7 @@ body {
   margin: 0 15px 7px;
 }
 
-.category-button, .filters button, .lang-button, .music-button, .prod-button, .recipe-button, .sub-button {
+.category-button, .filters button, .lang-button, .music-button, .page-button, .prod-button, .sub-button {
   animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
   background: linear-gradient(135deg, #cfa0ff, #7df9ff);
   border: none;
@@ -170,6 +170,10 @@ body {
   position: absolute;
   text-align: center;
   z-index: 1;
+}
+
+#gaming-button {
+  display: block;
 }
 
 h1 {
