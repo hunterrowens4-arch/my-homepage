@@ -176,6 +176,10 @@ body {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   color: #cfa0ff;
   font-size: 3rem;
@@ -304,6 +308,29 @@ li img {
   width: 100%;
 }
 
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.nav-button {
+  animation: pulse 2.5s infinite alternate, buttonBaseGlow 10s ease infinite;
+  background: linear-gradient(135deg, #cfa0ff, #7df9ff);
+  border: none;
+  border-radius: 16px;
+  color: #1a0d2b;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  overflow: hidden;
+  margin: 0 0 2rem;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
 p {
   line-height: 1.25em;
   margin: 0 10px 10px;
@@ -380,6 +407,22 @@ p {
     font-size: 1.2rem;
     min-width: 160px;
     padding: 14px 30px;
+  }
+
+  .game-card {
+    max-width: 80%;
+  }
+
+  .game-column-layout {
+    column-count: 1;
+  }
+
+  .game-container {
+    max-width: 80%;
+  }
+
+  nav {
+    width: 90%;
   }
 
   .recipe-grid {
