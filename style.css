@@ -311,7 +311,11 @@ li img {
 nav {
   display: flex;
   justify-content: space-evenly;
+  padding: 2rem 0 0;
+  position: sticky;
+  top: 0;
   width: 50%;
+  z-index: 1000;
 }
 
 .nav-button {
