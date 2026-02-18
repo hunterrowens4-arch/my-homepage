@@ -311,7 +311,7 @@ li img {
 nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
   position: sticky;
   top: 0;
   width: 50%;
@@ -403,10 +403,6 @@ p {
   margin: -10px 5% 25px;
 }
 
-#third-place img {
-  box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
-}
-
 @media (max-width: 600px) {
   
   h1 {
@@ -449,4 +445,8 @@ p {
   .recipe-grid span {
     line-height: 1em;
   }
+}
+
+#third-place img {
+  box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
