@@ -31,7 +31,7 @@ body {
   font-family: 'Poppins', sans-serif;
   justify-content: center;
   margin: -20px 0 0;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow: auto;
   padding-top: env(safe-area-inset-top);
   position: relative;
@@ -451,3 +451,4 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
