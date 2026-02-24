@@ -30,7 +30,6 @@ body {
   font-family: 'Poppins', sans-serif;
   justify-content: center;
   overflow: auto;
-  position: relative;
   text-align: center;
 }
 
@@ -453,3 +452,4 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
