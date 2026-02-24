@@ -1,142 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name='mobile-web-app-capable' content='yes'>
-  <meta name='apple-mobile-web-status-bar-style' content='black-translucent'> 
-  <title>Violet Tide</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel='stylesheet' type='text/css' href='style.css'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-status-bar-style' content='black-translucent'> 
+    <title>Violet Tide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <div id='background-wrapper'></div> <!--houses the bubble animation to keep scroll bars from freaking out-->
+    <div id='content'>
 
-  <div id='background-wrapper'></div> <!--houses the bubble animation to keep scroll bars from freaking out-->
-  <div id='content'>
+      <h1>Violet Tide</h1>
 
-    <h1>Violet Tide</h1>
+      <div class='productivity-container' id='productivity-container'> <!--start links to productivity buttons-->
 
-    <div class='productivity-container' id='productivity-container'> <!--start links to productivity buttons-->
+        <button class='category-button' id='productivity-main'>Productivity</button>
 
-      <button class='category-button' id='productivity-main'>Productivity</button>
-
-      <div class='prod-buttons'>
-        <a href='https://docs.google.com/spreadsheets/d/1dEeHNpsIy0FHOU3MCVqEgKGTyblOb47kjfhuqyB11IA/edit?gid=278192092#gid=278192092' target='_blank'><button class='prod-button'>Todo</button></a>
-        <a href='https://docs.google.com/document/d/1RW9N_LMjxVM6vT3eiTkKif3R0jpOuPF5xWxV86RVevQ/edit?tab=t.0' target='_blank'><button class='prod-button'>Check-In</button></a>
-        <a href='https://www.rocketmoney.com/' target='_blank'><button class='prod-button'>Rocket Money</button></a>
-        <a href='https://docs.google.com/spreadsheets/d/1UgWPZZUhirZ2xQJoj2I1LqT6tiL0VkVkGGUuRIcaYow/edit?gid=793791566#gid=793791566' target='_blank'><button class='prod-button'>Language Tracker</button></a>
-        <a href='https://docs.google.com/spreadsheets/d/1BbQSGvcJ5HSb2eGJL8i7enwFpU-p1EEYdSxaQO_8tM8/edit?gid=0#gid=0' target='_blank'><button class='prod-button'>Finances</button></a>
+        <div class='prod-buttons'>
+          <a href='https://docs.google.com/spreadsheets/d/1dEeHNpsIy0FHOU3MCVqEgKGTyblOb47kjfhuqyB11IA/edit?gid=278192092#gid=278192092' target='_blank'><button class='prod-button'>Todo</button></a>
+          <a href='https://docs.google.com/document/d/1RW9N_LMjxVM6vT3eiTkKif3R0jpOuPF5xWxV86RVevQ/edit?tab=t.0' target='_blank'><button class='prod-button'>Check-In</button></a>
+          <a href='https://www.rocketmoney.com/' target='_blank'><button class='prod-button'>Rocket Money</button></a>
+          <a href='https://docs.google.com/spreadsheets/d/1UgWPZZUhirZ2xQJoj2I1LqT6tiL0VkVkGGUuRIcaYow/edit?gid=793791566#gid=793791566' target='_blank'><button class='prod-button'>Language Tracker</button></a>
+          <a href='https://docs.google.com/spreadsheets/d/1BbQSGvcJ5HSb2eGJL8i7enwFpU-p1EEYdSxaQO_8tM8/edit?gid=0#gid=0' target='_blank'><button class='prod-button'>Finances</button></a>
+        </div>
       </div>
-    </div>
   
-    <!-- Languages at bottom -->
-    <div class="languages-container" id="languages-container">
+      <!-- Languages at bottom -->
+      <div class="languages-container" id="languages-container">
       
-      <button class="category-button" id="languages-main">Languages</button>
+        <button class="category-button" id="languages-main">Languages</button>
     
-      <div class="lang-buttons">
-        <a href="spanish.html"><button class="lang-button">Spanish</button></a>
-        <a href="japanese.html"><button class="lang-button">Japanese</button></a>
-        <a href="russian.html"><button class="lang-button">Russian</button></a>
-        <a href='https://hunterrowens4-arch.github.io/language_in_progress' target='_blank'><button class='lang-button'>Language in Progress</button></a>
+        <div class="lang-buttons">
+          <a href="spanish.html"><button class="lang-button">Spanish</button></a>
+          <a href="japanese.html"><button class="lang-button">Japanese</button></a>
+          <a href="russian.html"><button class="lang-button">Russian</button></a>
+          <a href='https://hunterrowens4-arch.github.io/language_in_progress' target='_blank'><button class='lang-button'>Language in Progress</button></a>
+        </div>
       </div>
-    </div>
 
-    <div class='music-container' id='music container'> <!--start music buttons-->
+      <div class='music-container' id='music container'> <!--start music buttons-->
 
-      <button class='category-button' id='music-main'>Music</button>
+        <button class='category-button' id='music-main'>Music</button>
   
-      <div class='music-buttons'>
-        <a href='https://music.apple.com/library/playlist/p.LV0PB8ZCZYlDovo' target='blank'><button class='music-button'>Quarantine</button></a>
-        <a href='https://music.apple.com/library/playlist/p.QvDQBqQh7YVoMlM' target='blank'><button class='music-button'>Asian Lofi</button></a>
-        <a href='https://www.youtube.com/c/LofiGirl' target='blank'><button class='music-button'>Lofi Girl</button></a>
-        <a href='https://www.pandora.com/station/play/185245721195193502' target='blank'><button class='music-button'>Mo' Energy</button></a>
-        <a href='https://docs.google.com/spreadsheets/d/1m2zEW-ohAlYi18MXeb-0rQAWKVfLvlh2c13pTwEHCg8/edit?gid=0#gid=0' target='_blank'><button class='music-button'>Quarantine Records</button></a>
+        <div class='music-buttons'>
+          <a href='https://music.apple.com/library/playlist/p.LV0PB8ZCZYlDovo' target='blank'><button class='music-button'>Quarantine</button></a>
+          <a href='https://music.apple.com/library/playlist/p.QvDQBqQh7YVoMlM' target='blank'><button class='music-button'>Asian Lofi</button></a>
+          <a href='https://www.youtube.com/c/LofiGirl' target='blank'><button class='music-button'>Lofi Girl</button></a>
+          <a href='https://www.pandora.com/station/play/185245721195193502' target='blank'><button class='music-button'>Mo' Energy</button></a>
+          <a href='https://docs.google.com/spreadsheets/d/1m2zEW-ohAlYi18MXeb-0rQAWKVfLvlh2c13pTwEHCg8/edit?gid=0#gid=0' target='_blank'><button class='music-button'>Quarantine Records</button></a>
+        </div>
       </div>
+
+      <a href='gaming.html' id='gaming-button'><button class='page-button'>Gaming</button></a>
+      <a href='food.html'><button class='page-button'>Food</button></a>
+      <a href='recipes.html' target='_blank'><button class='page-button'>Drinks</button></a>
+
     </div>
 
-    <a href='gaming.html' id='gaming-button'><button class='page-button'>Gaming</button></a>
-    <a href='food.html'><button class='page-button'>Food</button></a>
-    <a href='recipes.html' target='_blank'><button class='page-button'>Drinks</button></a>
+    <script>
+      // Floating particles
+      const wrapper = document.getElementById('background-wrapper');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
 
-  </div>
+        const size = Math.random() * 10 + 5;
+        particle.style.width = particle.style.height = `${size}px`;
 
-<script>
-  // Floating particles
-  const wrapper = document.getElementById('background-wrapper');
-  for (let i = 0; i < 20; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
+        // random horizontal start
+        const startX = Math.random() * 100;
+        particle.style.left = `${startX}vw`;
 
-    const size = Math.random() * 10 + 5;
-    particle.style.width = particle.style.height = `${size}px`;
+        // random vertical start
+        const startY = Math.random() * 100;
+        particle.style.top = `${startY}vh`;
 
-    // random horizontal start
-    const startX = Math.random() * 100;
-    particle.style.left = `${startX}vw`;
+        // random animation duration and delay
+        particle.style.animationDuration = `${10 + Math.random() * 20}s`;
 
-    // random vertical start
-    const startY = Math.random() * 100;
-    particle.style.top = `${startY}vh`;
+        // random horizontal drift (angle)
+        const drift = (Math.random() * 2 - 1) * 50;
+        particle.style.setProperty('--drift', `${drift}px`);
 
-    // random animation duration and delay
-    particle.style.animationDuration = `${10 + Math.random() * 20}s`;
+        wrapper.appendChild(particle);
+      }
 
-    // random horizontal drift (angle)
-    const drift = (Math.random() * 2 - 1) * 50;
-    particle.style.setProperty('--drift', `${drift}px`);
+      // Languages toggle
+      const mainButton = document.getElementById('languages-main');
+      const langButtons = document.querySelectorAll('.lang-button');
 
-    wrapper.appendChild(particle);
-  }
+      mainButton.addEventListener('click', () => {
+        langButtons.forEach((btn, i) => {
+          setTimeout(() => {
+            btn.classList.toggle('show'); // toggle visibility
+          }, i * 150); // stagger effect
+        });
+      });
 
-  // Languages toggle
-  const mainButton = document.getElementById('languages-main');
-  const langButtons = document.querySelectorAll('.lang-button');
+      // Productivity toggle
+      const mainProd = document.getElementById('productivity-main');
+      const prodButtons = document.querySelectorAll('.prod-button');
 
-  mainButton.addEventListener('click', () => {
-    langButtons.forEach((btn, i) => {
-      setTimeout(() => {
-        btn.classList.toggle('show'); // toggle visibility
-      }, i * 150); // stagger effect
-    });
-  });
+      mainProd.addEventListener('click', () => {
+        prodButtons.forEach((btn, i) => {
+          setTimeout(() => {
+            btn.classList.toggle('show'); //toggle visibility
+          }, i * 150); //stagger effect
+        });
+      });
 
-  // Productivity toggle
-  const mainProd = document.getElementById('productivity-main');
-  const prodButtons = document.querySelectorAll('.prod-button');
+      // Music toggle
+      const mainMusic = document.getElementById('music-main');
+      const musicButtons = document.querySelectorAll('.music-button');
 
-  mainProd.addEventListener('click', () => {
-    prodButtons.forEach((btn, i) => {
-      setTimeout(() => {
-        btn.classList.toggle('show'); //toggle visibility
-      }, i * 150); //stagger effect
-    });
-  });
-
-  // Music toggle
-  const mainMusic = document.getElementById('music-main');
-  const musicButtons = document.querySelectorAll('.music-button');
-
-  mainMusic.addEventListener('click', () => {
-    musicButtons.forEach((btn, i) => {
-      setTimeout (() => {
-        btn.classList.toggle('show'); //toggle visibility
-      }, i * 150); //stagger effect
-    });
-  });
-
-</script>
-
-</body>
+      mainMusic.addEventListener('click', () => {
+        musicButtons.forEach((btn, i) => {
+          setTimeout (() => {
+            btn.classList.toggle('show'); //toggle visibility
+          }, i * 150); //stagger effect
+        });
+      });
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
