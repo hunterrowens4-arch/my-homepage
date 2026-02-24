@@ -15,7 +15,6 @@
   left: 0;
   height: 100%;
   overflow: hidden;
-  top: 0;
   width: 100%;
   z-index: -1
 }
@@ -454,6 +453,7 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
 
