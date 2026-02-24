@@ -23,7 +23,7 @@
 body {
   align-items: center;
   animation: gradientShift 30s ease infinite;
-  background: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
+  background: transparent;
   background-size: 400% 400%;
   color: #e0e0ff;
   display: flex;
@@ -181,6 +181,7 @@ body, html {
 }
 
 html {
+  background: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
   scroll-behavior: smooth;
 }
 
@@ -454,5 +455,6 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
