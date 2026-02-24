@@ -390,14 +390,6 @@ p {
   object-fit: cover;
 }
 
-.safe-area {
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-  padding-top: env(safe-area-inset-top);
-  min-height: 100dvh;
-}
-
 #second-place img {
   box-shadow: 0 0 6px 6px rgba(192, 192, 192, 0.6);
 }
@@ -462,4 +454,5 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
