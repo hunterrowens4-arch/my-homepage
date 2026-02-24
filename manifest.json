@@ -1,0 +1,8 @@
+{
+  "name": "Violet Tide",
+  "short_name": "VioletTide",
+  "start_url": "/",
+  "display": "standalone",
+  "background-color": "#ffffff",
+  "theme-color": "#000000"
+}
