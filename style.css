@@ -1,5 +1,4 @@
 :root {
-  --background-color: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
   --primary-text-color: #cfa0ff;
 }
 
@@ -15,6 +14,8 @@
   left: 0;
   height: 100%;
   overflow: hidden;
+  padding-top: env(safe-area-inset-top);
+  top: 0;
   width: 100%;
   z-index: -1
 }
@@ -22,21 +23,19 @@
 body {
   align-items: center;
   animation: gradientShift 30s ease infinite;
-  background: var(--background-color);
+  background: linear-gradient(135deg, #3a0d6f, #7d00ff, #00d4ff, #4f00a8);
   background-size: 400% 400%;
   color: #e0e0ff;
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
   justify-content: center;
+  margin: -20px 0 0;
+  min-height: -webkit-fill-available;
   overflow: auto;
+  padding-top: env(safe-area-inset-top);
+  position: relative;
   text-align: center;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .card-content h2 {
@@ -93,12 +92,12 @@ body, html {
 }
 
 .desc, .tag {
-  display: block;
-  padding: 3px 9px;
   border-radius: 10px;
+  display: block;
   font-size: 12px;
-  opacity: .8;
   margin-bottom: 3px;
+  opacity: .8;
+  padding: 3px 9px;
 }
 
 .filters {
@@ -157,7 +156,7 @@ body, html {
 }
 
 .game-cover {
-  display; block;
+  display: block;
   height: auto;
   object-fit: cover;
   width: 100%;
@@ -452,4 +451,3 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
-
