@@ -38,23 +38,6 @@ body {
   text-align: center;
 }
 
-body::after {
-  background: linear-gradient(
-    to bottom,
-    white 0%,
-    rgba(255,255,255,0.7) 40%,
-    rgba(255,255,255,0) 100%
-  );
-  content: "";
-  height: 80px;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 9999;
-}
-
 .card-content h2 {
   margin: 0 15px 7px;
 }
@@ -468,4 +451,5 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
