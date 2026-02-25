@@ -33,7 +33,7 @@ body {
   margin: -20px 0 0;
   min-height: -webkit-fill-available;
   overflow: auto;
-  padding: 4rem 0 0;
+  padding: 5rem 0 0;
   position: relative;
   text-align: center;
 }
@@ -184,7 +184,7 @@ html {
 h1 {
   color: #cfa0ff;
   font-size: 3rem;
-  margin-bottom: 50px;
+  margin: 0 0 4rem;
   position: relative;
   text-shadow: 0 0 20px rgba(207,160,255,0.8), 0 0 40px rgba(125,249,255,0.4);
   z-index: 1;
@@ -451,6 +451,7 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
 
