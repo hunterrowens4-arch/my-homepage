@@ -22,18 +22,15 @@
 
 body {
   align-items: center;
-  animation: gradientShift 30s ease infinite;
-  background: var(--background-color);
   background-size: 400% 400%;
   color: #e0e0ff;
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
+  height: 100%;
   justify-content: center;
-  margin: -20px 0 0;
-  min-height: -webkit-fill-available;
+  margin: 0;
   overflow: auto;
-  padding-top: env(safe-area-inset-top);
   position: relative;
   text-align: center;
 }
@@ -178,7 +175,22 @@ body {
 }
 
 html {
+  animation: gradientShift 30s ease infinite;
+  height: 100%;
+  margin: 0;
   scroll-behavior: smooth;
+}
+
+html::before {
+  background: var(--background-color);
+  background-size: 200% 200%;
+  bottom: -20vh;
+  content: "";
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: -20vh;
+  z-index: -1;
 }
 
 h1 {
@@ -451,6 +463,7 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
 
