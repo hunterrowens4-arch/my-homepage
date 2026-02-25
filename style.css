@@ -23,7 +23,7 @@
 body {
   align-items: center;
   animation: gradientShift 30s ease infinite;
-  background-color: blue !important;
+  background-color: var(--background-color);
   background-size: 400% 400%;
   color: #e0e0ff;
   display: flex;
@@ -178,7 +178,6 @@ body {
 }
 
 html {
-  background-color: red !important;
   scroll-behavior: smooth;
 }
 
@@ -452,5 +451,6 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
