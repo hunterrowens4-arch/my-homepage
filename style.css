@@ -29,10 +29,11 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
-  height: 100%;
   justify-content: center;
-  margin: 0;
+  margin: -20px 0 0;
+  min-height: -webkit-fill-available;
   overflow: auto;
+  padding-top: env(safe-area-inset-top);
   position: relative;
   text-align: center;
 }
@@ -177,8 +178,6 @@ body {
 }
 
 html {
-  height: 100%;
-  margin: 0;
   scroll-behavior: smooth;
 }
 
@@ -452,10 +451,3 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
-
-
-
-
-
-
-
