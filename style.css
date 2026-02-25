@@ -356,6 +356,10 @@ p {
   z-index: 0;
 }
 
+.prod-button a::before {
+  pointer-events: none;
+}
+
 .recipe-card {
   border: 1px solid rgba(255,255,255,.2);
   border-radius: 14px;
@@ -454,6 +458,7 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
 
