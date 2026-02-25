@@ -63,6 +63,11 @@
     </div>
 
     <script>
+      // initial scroll to collapse blank space on casi-app interface
+      document.addEventListener("DOMContentLoaded", function() {
+        window.scrollTo(0,1);
+      });
+      
       // Floating particles
       const wrapper = document.getElementById('background-wrapper');
       for (let i = 0; i < 20; i++) {
@@ -128,3 +133,4 @@
     </script>
   </body>
 </html>
+
