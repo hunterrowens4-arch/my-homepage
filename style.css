@@ -14,7 +14,10 @@
 #background-wrapper {
   left: 0;
   height: 100%;
+  inset: 0;
   overflow: hidden;
+  pointer-events: none;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: -1
@@ -32,7 +35,7 @@ body {
   justify-content: center;
   margin: -20px 0 0;
   min-height: -webkit-fill-available;
-  overflow: auto;
+  overflow: hidden auto;
   padding: 9rem 0 0;
   position: relative;
   text-align: center;
@@ -451,6 +454,7 @@ p {
 #third-place img {
   box-shadow: 0 0 6px 6px rgba(205, 127, 50, 0.6);
 }
+
 
 
 
